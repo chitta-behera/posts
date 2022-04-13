@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 const posts = {};
 
 app.get('/posts', (req, res) => {
+console.log('v5: get request');
   res.send(posts);  
 });
 
@@ -33,6 +34,6 @@ app.post('/posts', (req, res) => {
 
 
 const server = app.listen(4002, () => {
-  console.log('v4 build process check ...');
+  console.log('v5 docker image push ...');
   console.log('Listing on 4002 port...');
 })
