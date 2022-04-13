@@ -33,6 +33,6 @@ app.post('/posts', (req, res) => {
 
 
 const server = app.listen(4002, () => {
-  console.log('v3:google cloud kubernetes...');
+  console.log('v4 build process check ...');
   console.log('Listing on 4002 port...');
 })
