@@ -13,7 +13,6 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', (req, res) => {
-	console.log('blog post create ..');
   const id = randomBytes(4).toString('hex');
   const { title } = req.body;
 
