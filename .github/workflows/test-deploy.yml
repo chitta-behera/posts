@@ -31,5 +31,5 @@ jobs:
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         CLUSTER_NAME: ${{ secrets.GKE_CLUSTER_NAME }}
         ZONE_NAME: us-central1-a
-      with:
-        args: apply -f infra/k8/
+    - name: apply
+      run: kubectl apply -f /infra/k8
