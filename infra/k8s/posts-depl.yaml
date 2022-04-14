@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: posts
-        image: posts 
+        image: us.gcr.io/tidy-daylight-298517/posts 
       imagePullSecrets:
       - name: regcred
 ---        
@@ -25,7 +25,7 @@ metadata:
 spec:
   selector:
     app: posts
-  type: NodePort
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 4002
