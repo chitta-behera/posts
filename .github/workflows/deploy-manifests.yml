@@ -10,11 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Docker Build
+    - name: kubectl - Google Cloud GKE cluster
     - run: cd posts && docker build -t 3028/posts .
     - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - run: docker push 3028/posts
-    - name: kubectl - Google Cloud GKE cluster
       uses: ameydev/gke-kubectl-action@master
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
