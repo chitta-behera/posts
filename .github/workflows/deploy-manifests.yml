@@ -12,6 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Building and Pushing Posts service
       run: |-
+        server-id: docker.io
         cd posts && docker build -t 3028/posts .
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         docker push 3028/posts
