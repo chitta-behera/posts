@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: posts
-        image: us.gcr.io/tidy-daylight-298517/posts
+        image: 3028/posts
         imagePullPolicy: Always
       imagePullSecrets:
       - name: regcred
