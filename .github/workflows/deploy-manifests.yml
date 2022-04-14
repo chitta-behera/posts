@@ -28,7 +28,7 @@ jobs:
         context: ./posts/
         file: ./posts/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/posts:latest
+        tags: 3028/posts:latest
        
   Deploy:
     needs: build
